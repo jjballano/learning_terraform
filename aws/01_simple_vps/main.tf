@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = "personal"
+  profile = var.aws_profile
   region = "eu-west-1"
 }
 

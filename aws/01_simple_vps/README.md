@@ -9,3 +9,6 @@ To release the server we just configured in main file, just run:
 
 To delete all that we just created, run:
 `terraform destroy`
+
+There is a variable called `aws_profile` defined in `variables.tf` file. In order to override the value when creating the plan, add a parameter `-var`:
+`terraform apply -var 'aws_profile=AnotherProfile'`
