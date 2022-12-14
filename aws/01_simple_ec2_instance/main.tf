@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "jjballano"
+    workspaces {
+      name = "learn-terraform"
+    }
+  }
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -10,8 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = var.aws_profile
-  region = "eu-west-1"
+  region = var.aws_region
 }
 
 resource "aws_instance" "example_app_server" {

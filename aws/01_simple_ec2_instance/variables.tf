@@ -1,5 +1,5 @@
-variable "aws_profile" {
-  description = "The profile to be used"
+variable "aws_region" {
+  description = "The region to deploy"
   type        = string
-  default     = "personal"
+  default     = "eu-west-1"
 }
